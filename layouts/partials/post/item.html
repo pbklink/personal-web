@@ -1,10 +1,15 @@
 <div class="post-container">
-  <h2>
-    <a href="{{.Permalink}}">{{ .Title }}</a>
-  </h2>
-  <p>{{ .Summary }}</p>
-  <div class="read-more">
-    <a alt="{{.Title}}" href="{{.Permalink}}" />{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
-    Read more</a>
-  </div>
+  <section class="post-item-heading">
+    <h2>
+      <a href="{{.Permalink}}">{{ .Title }}</a>
+    </h2>
+    <span class="post-item-date">{{ .Date | time.Format ":date_medium" }}</span>
+  </section>
+  <section class="post-item-summary">
+    <p>{{ .Summary }}</p>
+    <div class="read-more">
+      <a alt="{{.Title}}" href="{{.Permalink}}" />{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
+      Read more</a>
+    </div>
+  </section>
 </div>

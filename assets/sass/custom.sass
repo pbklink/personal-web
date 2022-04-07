@@ -179,10 +179,29 @@ header
 .designs
   margin-right: 20px
 
-.read-more
-  margin-top: -$margin-blocks/3
-  text-align: right
-  display: block
-
 .chroma
   padding: 10px
+
+.post-container
+  .post-item-heading
+    display: grid
+    grid-template-columns: auto max-content
+    align-items: center
+    margin-top: 1em
+
+    h2
+      font-size: revert
+      font-weight: revert
+      margin: 0
+
+    .post-item-date
+      font-style: italic
+
+  .post-item-summary
+    p
+      margin-bottom: 0
+
+    .read-more
+      text-align: right
+      display: block
+
